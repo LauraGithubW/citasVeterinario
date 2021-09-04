@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de citas de mascotas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--Añadimos fuentes-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header id="header">
+        <div id="title">
+            <h1>Administrador de pacientes</h1>
+        </div>
+    
+       
+    </header>
+    
+    
+    <div id="error"></div>
+    <div id="container">
+        <div id="crearCitas">
+            <div id="caja-form">
+            <h2>Crear cita</h2>
+            <form action="#" id="form">
+                <label for="nombre">Nombre mascota*</label> 
+                <input type="text" id="nombre-mascota" required />
+                <label for="nombre-dueño" >Nombre dueño*</label>
+                <input type="text" id="nombre-dueño" required >
+                <label for="hora">Fecha y hora*</label>
+                <input type="datetime-local" id="hora" required/>
+                <label for="síntomas">Síntomas*</label>
+                <textarea  id="textareas" cols="10" rows="10" required></textarea>
+                <br>
+                <button onclick="agregarCita()" class="submit">Enviar</button>
+            </form>
+            
+        </div>
+        
+        </div>
+        
+
+        <div id="mostrarCitas">
+            </div>
+    </div>
+    <!--Importamos el archivo de Javascript-->
+  <script src="main.js"></script>  
+  <!--Importamos una librería para crear los id de los usuarios de forma automática-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.7/uuid.min.js"></script>
+</body>
+</html>
