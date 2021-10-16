@@ -1,178 +1,156 @@
-body{
-    margin:0px;
-    padding:0px;
-    font-family: 'Montserrat', sans-serif;
-    height:100vh;
-    background:url('./Imagenes/pets-3715733_1920.jpg');
-    background-position: center;
-    background-attachment: fixed;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
 
-
+  background: url("./Imagenes/pets-3715733_1920.jpg");
+  background-position: center;
+  background-attachment: fixed;
 }
 
-#header{
-display:flex;
-width: 100vw;
-height:30vh;
-background: linear-gradient(to right, rgba(252,236,252,1) 0%, rgba(251,166,225,1) 0%, rgb(253, 137, 172) 0%, rgba(250,135,120,1) 100%);
-border:2px solid black;
-
+#header {
+  display: flex;
+  width: 100vw;
+  height: 30vh;
+  background: linear-gradient(
+    to right,
+    rgba(252, 236, 252, 1) 0%,
+    rgba(251, 166, 225, 1) 0%,
+    rgb(253, 137, 172) 0%,
+    rgba(250, 135, 120, 1) 100%
+  );
+  border: 2px solid black;
 }
-h1{
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: rgb(170, 58, 223);
 
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: rgb(170, 58, 223);
-    
-    text-shadow: 1px 0px 6px rgb(255,255,255);
-    flex-direction: row;
-    
-    
-}
-
-#title{
-    margin-left: 2%;
-    margin-top: 2%;
+  text-shadow: 1px 0px 6px rgb(255, 255, 255);
+  flex-direction: row;
 }
 
-#container{
+#title {
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+#container {
+  display: flex;
+
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-evenly;
+}
+
+#crearCitas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 35%;
+  height: 80vh;
+  margin-top: 8%;
+  border: 2px solid #ccc;
+  background-color: rgb(255, 174, 248);
+  border-radius: 5%;
+}
+
+#mostrarCitas {
+  margin-top: 8%;
+  margin-left: 38%;
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 30%;
+
+  border-radius: 5%;
+  border: 2px solid #ccc;
+  background-color: rgb(255, 191, 252);
+  display: none;
+}
+
+#crearCita,
+h2 {
+  color: rgb(255, 255, 255);
+}
+
+#caja-form {
+  width: 30vw;
+}
+
+.submit {
+  cursor: pointer;
+  border-radius: 5px;
+  width: 40%;
+}
+
+.submit:hover {
+  background-color: lemonchiffon;
+}
+
+#boton-cerrar,
+#boton-imprimir {
+  cursor: pointer;
+  border-radius: 5px;
+  width: 45%;
+}
+
+#ficha {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.parrafos-ficha {
+  color: #666;
+  font-size: 14px;
+}
+
+@media (max-width: 2000px) {
+  #caja-form {
     display: flex;
-  
-    width:100vw;
-    height: 100vh;
-    justify-content: space-evenly;
-
-}
-
-#crearCitas{
-    display:flex;
     flex-direction: column;
-    justify-content: center;
-     align-content: center;
-     align-items: center;
-    width:35%;
-    height:80vh;
-    margin-top:8%;
-    border:2px solid #ccc;
-    background-color:rgb(255, 174, 248);
-    border-radius: 5%;
-  
-}
+    height: 90%;
+  }
 
-
-#mostrarCitas{
-    margin-top: 8%;
-    display:flex;
-  
-    width:30%;
-    height:80vh;
-    border-radius: 5%;
-    border:2px solid #ccc;
-    background-color:rgb(255, 191, 252);
-    display: none;
-
-
-}
-
-#crearCita,h2{
-
-    color:rgb(255, 255, 255);
-    
-}
-
-#caja-form{
-    width:30vw;
-   
-}
-
-.submit{
-    cursor:pointer;
-    border-radius: 5px;
-    width:40%;
-    
-    
-}
-
- 
-.submit:hover{
-    background-color: lemonchiffon;
-}
-
-#boton-cerrar,#boton-imprimir{
-    cursor:pointer;
-    border-radius: 5px;
-    width:45%;
-
-}
-
-#ficha{
-    display:flex;
-    width:40%;
-    justify-content: center;
-    margin-top: 5%;
-    margin-left: 10%;;
-    
-    
-}
-
-.parrafos-ficha{
-    color:#666;
-    font-size: 14px;
-}
-
-
-@media (max-width: 2000px){
-    
-    #caja-form{
-
-        display:flex;
-        flex-direction: column;
-        height: 90%;
-        
-
-    }
-
-    #form{
-        display:flex;
-        flex-direction: column;
-        height: 80%;
-    }
-    
-    
+  #form {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+  }
 }
 
 @media (max-width: 600px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 
-    #container{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        
-    }
+  #crearCitas,
+  #mostrarCitas {
+    height: 800px;
+    width: 60%;
+  }
 
-    #crearCitas, #mostrarCitas{
+  #crearCitas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 65%;
+  }
 
-        height:800px;
-        width:60%;
-        
-    }
-
-    #crearCitas{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 65%;
-        
-    }
-
-    #caja-form{
-        width:80% !important;
-    }
-
-  
-    
-
-
-    
+  #caja-form {
+    width: 80% !important;
+  }
 }
